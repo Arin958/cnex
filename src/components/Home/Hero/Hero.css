@@ -1,0 +1,266 @@
+
+
+.banner-section {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/hero-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 100px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.banner-container {
+  max-width: 1224px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.banner_container_left_side {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.banner_container_left_side .paragraph {
+  font-size: 1rem;
+  color: #B6B8B9;
+  letter-spacing: 0%;
+  font-weight: 400;
+  white-space: normal;
+  line-height: 1.5;
+}
+
+.banner_container_left_side .heading {
+  font-size: 52px;
+  color: #fff;
+  line-height: 1.2;
+  font-weight: 500;
+  margin: 0;
+}
+
+.heading-span {
+  color: #ff785a;
+  position: relative;
+  display: inline-block;
+}
+
+.heading-span::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff785a;
+}
+
+.banner_container_right_side {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner_container_right_side .banner-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.1));
+  animation: float 6s ease-in-out infinite;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.button-container a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.button-container a:hover {
+  transform: scale(1.05);
+}
+
+
+
+.app-download-img {
+  width: 180px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Tablet Responsive (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .banner-section {
+    padding: 40px 40px;
+    min-height: auto;
+  }
+
+  .banner-container {
+    gap: 40px;
+  }
+
+  .banner_container_left_side .heading {
+    font-size: 44px;
+  }
+
+  .app-download-img {
+    width: 160px;
+  }
+}
+
+/* Mobile Responsive (481px - 767px) */
+@media screen and (max-width: 768px) {
+  .banner-img {
+    display: none;
+  }
+
+  .banner-container {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .banner_container_left_side {
+    align-items: self-start;
+    gap: 20px;
+    text-align: left;
+  }
+
+  .banner_container_left_side .heading {
+    font-size: 36px;
+  }
+
+  .banner_container_left_side .paragraph {
+    font-size: 0.95rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+
+
+  .app-download-img {
+    width: 150px;
+  }
+
+  .banner_container_right_side .banner-img {
+    max-width: 80%;
+  }
+}
+
+/* Small Mobile Responsive (320px - 480px) */
+@media screen and (max-width: 480px) {
+
+  .banner-container {
+    gap: 30px;
+  }
+
+  .banner_container_left_side {
+    gap: 15px;
+  }
+
+  .banner_container_left_side .heading {
+    font-size: 28px;
+  }
+
+  .banner_container_left_side .paragraph {
+    font-size: 0.85rem;
+  }
+
+  .banner_container_right_side {
+    display: none;
+  }
+
+  .button-container {
+    gap: 12px;
+    width: 100%;
+  }
+
+
+
+  .app-download-img {
+    width: 100%;
+    max-width: 124px;
+  }
+
+  .heading-span::after {
+    bottom: 2px;
+    height: 1.5px;
+  }
+
+  .banner_container_right_side .banner-img {
+    max-width: 90%;
+  }
+}
+
+/* Very Small Mobile (up to 320px) */
+@media screen and (max-width: 320px) {
+
+  .banner_container_left_side .heading {
+    font-size: 24px;
+  }
+
+  .banner_container_left_side .paragraph {
+    font-size: 0.8rem;
+  }
+
+  .app-download-img {
+    max-width: 124px;
+  }
+}
+
+
+/* Landscape mode for mobile */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  .banner-section {
+    min-height: auto;
+    padding: 40px 20px;
+  }
+
+  .banner-container {
+    gap: 30px;
+  }
+
+  .banner_container_left_side .heading {
+    font-size: 32px;
+  }
+
+  .banner-img {
+    max-width: 250px;
+  }
+}
+

@@ -1,0 +1,271 @@
+/* ============================================
+   FULLY RESPONSIVE FEATURE SECTION
+   Based on your original design + enhancements
+   ============================================ */
+
+.feature-section {
+  background-color: #082d4a;
+  color: white;
+  padding: 60px 0 120px 0;
+  /* Add horizontal padding for small screens */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.feature-section .section-heading {
+  color: white;
+}
+
+.feature-section .container .section-heading-container .feature-sub-heading {
+  color: white;
+}
+
+/* Ensure container centers content */
+.feature-section .container {
+  max-width: 1224px;
+  margin: 0 auto;
+}
+
+.feature-grids {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
+
+.feature-grid-item{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: #062237;
+}
+
+.feature-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.feature-content .feature-heading {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.feature-paragraph {
+  color: #c3c4c5;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* TABLET LANDSCAPE & LAPTOP (992px - 1200px) */
+@media screen and (max-width: 1100px) {
+  .feature-section {
+    padding: 40px 40px;
+  }
+
+  .feature-grids {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .feature-grid-item {
+    padding: 22px;
+    gap: 20px;
+  }
+
+  .feature-content {
+    gap: 20px;
+  }
+
+  .feature-content .feature-heading {
+    font-size: 22px;
+  }
+
+  .feature-paragraph {
+    font-size: 15px;
+  }
+}
+
+/* TABLET PORTRAIT (768px - 992px) */
+@media screen and (max-width: 900px) {
+  .feature-section {
+    padding: 40px;
+  }
+
+  .feature-grids {
+    gap: 18px;
+  }
+
+  .feature-grid-item {
+    padding: 20px;
+    gap: 18px;
+  }
+
+  .feature-content {
+    gap: 18px;
+  }
+
+  .feature-content .feature-heading {
+    font-size: 20px;
+  }
+
+  .feature-paragraph {
+    font-size: 14px;
+  }
+}
+
+/* MOBILE LARGE (640px - 768px) */
+@media screen and (max-width: 768px) {
+
+
+  .feature-grids {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .feature-grid-item {
+    padding: 18px 14px;
+    gap: 16px;
+  }
+
+  .feature-content {
+    gap: 14px;
+  }
+
+  .feature-content .feature-heading {
+    font-size: 18px;
+  }
+
+  .feature-paragraph {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+/* MOBILE MEDIUM (480px - 640px) */
+@media screen and (max-width: 640px) {
+
+  .feature-grids {
+    grid-template-columns: 1fr; /* Single column on small screens */
+    gap: 16px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .feature-grid-item {
+    padding: 24px 20px;
+    gap: 20px;
+  }
+
+  .feature-content {
+    gap: 16px;
+  }
+
+  .feature-content .feature-heading {
+    font-size: 20px;
+  }
+
+  .feature-paragraph {
+    font-size: 14px;
+  }
+}
+
+/* MOBILE SMALL (up to 480px) */
+@media screen and (max-width: 480px) {
+
+  .feature-grids {
+    gap: 14px;
+  }
+
+  .feature-grid-item {
+    padding: 20px 16px;
+    gap: 16px;
+  }
+
+  .feature-content {
+    gap: 12px;
+  }
+
+  .feature-content .feature-heading {
+    font-size: 18px;
+  }
+
+  .feature-paragraph {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+}
+
+/* EXTRA SMALL (up to 360px) */
+@media screen and (max-width: 360px) {
+
+  .feature-grids {
+    gap: 12px;
+  }
+
+  .feature-grid-item {
+    padding: 18px 14px;
+    gap: 14px;
+  }
+
+  .feature-content .feature-heading {
+    font-size: 17px;
+  }
+
+  .feature-paragraph {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
+/* ============================================
+   HOVER EFFECTS (maintains your original)
+   ============================================ */
+.feature-grid-item:hover {
+  transform: translateY(-5px);
+  background-color: #0a2e4a;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: smooth transitions */
+.feature-grid-item,
+.feature-content,
+.feature-grids {
+  transition: all 0.3s ease;
+}
+
+/* Add spacing for heading container */
+.feature-section .section-heading-container {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .feature-section .section-heading-container {
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .feature-section .section-heading-container {
+    margin-bottom: 28px;
+  }
+}

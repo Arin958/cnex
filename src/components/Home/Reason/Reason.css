@@ -1,0 +1,243 @@
+/* ============================================
+   FULLY RESPONSIVE REASON SECTION
+   Based on your original design + enhancements
+   ============================================ */
+
+.reason-section {
+  background-color: #082d4a;
+  color: white;
+  padding: 120px 0 60px 0;
+  /* Add horizontal padding for small screens */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.reason-section .section-heading {
+  color: white;
+}
+
+.reason-section-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  gap: 60px;
+  max-width: 1224px;
+  margin: 0 auto; /* Center the container */
+}
+
+.reason-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
+
+.reason-grid {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: #062237;
+}
+
+.reason-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.reason-content .reason-heading {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.reason-paragraph {
+  color: #C3C4C5;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+
+/* TABLET LANDSCAPE & LARGE TABLETS (992px - 1200px) */
+@media screen and (max-width: 1100px) {
+  .reason-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .reason-section {
+    padding: 40px 40px;
+  }
+  
+  .reason-section-container {
+    gap: 50px;
+  }
+  
+  .reason-grid {
+    padding: 22px;
+  }
+  
+  .reason-content .reason-heading {
+    font-size: 22px;
+  }
+  
+  .reason-paragraph {
+    font-size: 15px;
+  }
+}
+
+/* TABLET PORTRAIT (768px - 992px) */
+
+
+/* MOBILE LARGE (640px - 768px) */
+@media screen and (max-width: 768px) {
+
+  
+  .reason-section-container {
+    gap: 40px;
+  }
+  
+  .reason-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .reason-grid {
+    padding: 18px 14px;
+    gap: 18px;
+  }
+  
+  .reason-content {
+    gap: 16px;
+  }
+  
+  .reason-content .reason-heading {
+    font-size: 18px;
+  }
+  
+  .reason-paragraph {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+/* MOBILE MEDIUM (480px - 640px) */
+@media screen and (max-width: 640px) {
+  
+  .reason-section-container {
+    gap: 35px;
+  }
+  
+  .reason-container {
+    grid-template-columns: 1fr; /* Single column on small screens */
+    gap: 16px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .reason-grid {
+    padding: 24px 20px;
+    gap: 20px;
+  }
+  
+  .reason-content {
+    gap: 14px;
+  }
+  
+  .reason-content .reason-heading {
+    font-size: 20px;
+  }
+  
+  .reason-paragraph {
+    font-size: 14px;
+  }
+}
+
+/* MOBILE SMALL (up to 480px) */
+@media screen and (max-width: 480px) {
+  
+  .reason-section-container {
+    gap: 30px;
+  }
+  
+  .reason-container {
+    gap: 14px;
+  }
+  
+  .reason-grid {
+    padding: 20px 16px;
+    gap: 16px;
+  }
+  
+  .reason-content {
+    gap: 12px;
+  }
+  
+  .reason-content .reason-heading {
+    font-size: 18px;
+  }
+  
+  .reason-paragraph {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+}
+
+/* EXTRA SMALL (up to 360px) */
+@media screen and (max-width: 360px) {
+
+  
+  .reason-section-container {
+    gap: 25px;
+  }
+  
+  .reason-grid {
+    padding: 18px 14px;
+    gap: 14px;
+  }
+  
+  .reason-content .reason-heading {
+    font-size: 17px;
+  }
+  
+  .reason-paragraph {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
+
+
+.reason-grid:hover {
+  transform: translateY(-5px);
+  background-color: #0a2e4a;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: smooth transitions */
+.reason-grid,
+.reason-content,
+.reason-container {
+  transition: all 0.3s ease;
+}
+
+
+
+

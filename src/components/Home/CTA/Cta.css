@@ -1,0 +1,145 @@
+
+.cta-section {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../image/cta-img.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 555px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.cta-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-heading {
+  font-size: 48px;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+
+.cta-para {
+    color: #C3C4C5;
+    text-align: center;
+}
+
+
+/* Tablet Landscape (992px - 1200px) */
+@media screen and (max-width: 1200px) {
+  .cta-section {
+    min-height: 500px;
+  }
+  
+  .cta-heading {
+    font-size: 42px;
+  }
+  
+  .cta-container {
+    gap: 20px;
+    padding: 0 20px;
+  }
+}
+
+/* Tablet Portrait (768px - 991px) */
+@media screen and (max-width: 991px) {
+  .cta-section {
+    min-height: 450px;
+  }
+  
+  .cta-heading {
+    font-size: 36px;
+  }
+  
+  .cta-para {
+    font-size: 15px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .cta-container {
+    gap: 18px;
+    padding: 0 30px;
+  }
+}
+
+/* Mobile Landscape (576px - 767px) */
+@media screen and(max-width: 767px) {
+  .cta-section {
+    min-height: 400px;
+  }
+  
+  .cta-heading {
+    font-size: 30px;
+  }
+  
+  .cta-para {
+    font-size: 14px;
+    max-width: 90%;
+  }
+  
+  .cta-container {
+    gap: 16px;
+    padding: 0 20px;
+  }
+}
+
+/* Mobile Portrait (up to 575px) */
+@media screen and (max-width: 575px) {
+  .cta-section {
+    min-height: 165px;
+  }
+  
+  .cta-heading {
+    font-size: 24px;
+  }
+  
+  .cta-para {
+     display: none;
+  }
+  
+  .cta-container {
+    gap: 14px;
+    padding: 0 15px;
+  }
+}
+
+/* Small Mobile (up to 380px) */
+@media screen and (max-width: 380px) {
+  .cta-section {
+    min-height: 320px;
+  }
+  
+  .cta-heading {
+    font-size: 20px;
+  }
+  
+  .cta-para {
+    font-size: 12px;
+  }
+  
+  .cta-container {
+    gap: 12px;
+  }
+}
+

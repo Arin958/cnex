@@ -1,0 +1,32 @@
+.testimonial-section {
+  padding: 120px 0 60px 0;
+}
+.testimonial-heading {
+  text-align: left;
+  align-items: self-start;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: self-end;
+  flex-direction: row;
+  border-bottom: 1px solid #dbdbdc;
+  padding-bottom: 30px;
+}
+.testimonial-heading .primary-heading {
+  margin-left: 40px;
+}
+
+.testimonial-heading .heading-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+@media screen and (max-width:1240px) {
+
+.testimonial-section {
+  padding: 40px 40px;
+}
+  
+}

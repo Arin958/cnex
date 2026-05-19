@@ -1,0 +1,229 @@
+.primary-heading {
+  color: #ff785a;
+  font-size: 1rem;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.primary-heading::before {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #ff785a;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  margin-left: -35px;
+  position: absolute;
+}
+
+.heading {
+  font-size: 52px;
+  color: black;
+  line-height: 60px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.section-heading {
+  font-size: 48px;
+  color: black;
+  line-height: 60px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.section-heading-container {
+  max-width: 1224px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.section-heading-container .sub-heading {
+  font-size: 48px;
+  color: black;
+  line-height: 60px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.sub-heading {
+  font-size: 48px;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1224px;
+  width: 100%;
+}
+
+.heading-para {
+  color: #86888a;
+}
+
+/* Responsive Styles */
+
+/* Large Tablets and Small Desktops (1024px and below) */
+@media screen and (max-width: 1024px) {
+  .heading {
+    font-size: 44px;
+    line-height: 52px;
+  }
+
+  .section-heading {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .sub-heading {
+    font-size: 40px;
+  }
+
+  .section-heading-container .sub-heading {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .section-heading-container {
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Tablets (768px to 1023px) */
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .section-heading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .sub-heading {
+    font-size: 32px;
+  }
+
+  .section-heading-container .sub-heading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .section-heading-container {
+    gap: 16px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+
+  .container {
+    max-width: 720px;
+  }
+
+  section {
+    padding: 16px;
+  }
+
+  .primary-heading {
+    font-size: 0.9rem;
+  }
+
+  .primary-heading::before {
+    width: 22px;
+    margin-left: -30px;
+  }
+}
+
+/* Mobile Landscape (480px to 767px) */
+@media screen and (max-width: 640px) {
+  .heading {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .section-heading {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .sub-heading {
+    font-size: 24px;
+  }
+
+  .section-heading-container .sub-heading {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .section-heading-container {
+    gap: 12px;
+    margin-bottom: 32px;
+    padding: 0 16px;
+  }
+
+  .primary-heading {
+    font-size: 0.8rem;
+  }
+
+  .primary-heading::before {
+    width: 18px;
+    margin-left: -25px;
+  }
+}
+
+/* Mobile Portrait (480px and below) */
+@media screen and (max-width: 480px) {
+  .heading {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .section-heading {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .sub-heading {
+    font-size: 20px;
+  }
+
+  .section-heading-container .sub-heading {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .section-heading-container {
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .primary-heading {
+    font-size: 0.75rem;
+  }
+
+  .primary-heading::before {
+    width: 16px;
+    height: 1.5px;
+    margin-left: -22px;
+  }
+}
