@@ -9,6 +9,7 @@ import { Navigation } from 'swiper/modules';
 import "./Slider.css"
 import "./Testimonial.css";
 import { testimonials } from '../../../data/testimonials/testimonial';
+import {  MoveLeftIcon, MoveRightIcon } from 'lucide-react';
 
 export default function Testimonial() {
 
@@ -24,10 +25,10 @@ export default function Testimonial() {
           </div>
           <div className="swiper-button-container">
             <div className="swiper-button-next">
-              <i className="fa-solid fa-arrow-right"></i>
+              <MoveRightIcon style={{ width: '20px', height: '20px' }} />
             </div>
             <div className="swiper-button-prev">
-              <i className="fa-solid fa-arrow-left"></i>
+              <MoveLeftIcon style={{ width: '20px', height: '20px' }} />
             </div>
           </div>
         </div>
