@@ -6,6 +6,7 @@ import 'swiper/css/navigation';
 
 import { Navigation } from 'swiper/modules';
 
+import "./Slider.css"
 import "./Testimonial.css";
 import { testimonials } from '../../../data/testimonials/testimonial';
 
