@@ -1,10 +1,9 @@
 import { useState } from "react";
 import "./Faq.css";
 import { faqData } from "../../../data/faq/faq";
+import { Cross, CrossIcon, X } from "lucide-react";
 
 export default function FAQ() {
-
-
   // State to track which FAQ is open
   const [openFaqId, setOpenFaqId] = useState(null);
 
@@ -31,16 +30,22 @@ export default function FAQ() {
           <div className="faq-list">
             {faqData.map((faq) => (
               <div className="faq-grid" key={faq.id}>
-                <div 
+                <div
                   className={`faq-question ${openFaqId === faq.id ? "active" : ""}`}
                   onClick={() => toggleFaq(faq.id)}
                 >
                   <p>{faq.question}</p>
                   <div className="cross-icons">
-                    <i className={`fa-solid ${openFaqId === faq.id ? "fa-minus" : "fa-plus"}`}></i>
+                    {openFaqId === faq.id ? (
+                      <X style={{ transform: "rotate(45deg)" }} />
+                    ) : (
+                      <X />
+                    )}
                   </div>
                 </div>
-                <div className={`faq-answer ${openFaqId === faq.id ? "show" : ""}`}>
+                <div
+                  className={`faq-answer ${openFaqId === faq.id ? "active" : ""}`}
+                >
                   {faq.answer}
                 </div>
               </div>
