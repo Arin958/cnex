@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Faq.css";
 import { faqData } from "../../../data/faq/faq";
-import { Cross, CrossIcon, X } from "lucide-react";
+import { X } from "lucide-react";
 
 export default function FAQ() {
   // State to track which FAQ is open
