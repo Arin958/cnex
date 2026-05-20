@@ -4,12 +4,13 @@ import "./Hero.css";
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
-
-
+  const [isImageFading, setIsImageFading] = useState(false);
+  const [rotation, setRotation] = useState(0);
 
   const slides = [
     {
       backgroundImage: "/hero-background.jpg",
+      mobileImage: "/hero-mobile-img.png",
       heading: (
         <>
           <span className="heading-span">Experience</span> the Future of Female
@@ -20,15 +21,17 @@ export default function Hero() {
     },
     {
       backgroundImage: "/hero-background-2.jpg",
+      mobileImage: "/mobile-img-2.png",
       heading: (
         <>
-          Where  <span className="heading-span">Fashion</span> Meets Feminity
+          Where <span className="heading-span">Fashion</span> Meets Feminity
         </>
       ),
       paragraph: "Discover trending products, pre-order exclusives, and book trusted services — all in one place.",
     },
     {
       backgroundImage: "/hero-background-3.jpg",
+      mobileImage: "/mobile-img-3.png",
       heading: (
         <>
           <span className="heading-span">Shop Smarter</span> with{" "}
@@ -39,6 +42,7 @@ export default function Hero() {
     },
     {
       backgroundImage: "/hero-background-4.jpg",
+      mobileImage: "/mobile-img-4.png",
       heading: (
         <>
           <span className="heading-span">Join</span> the{" "}
@@ -51,8 +55,9 @@ export default function Hero() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Start fade out
+      // Start fade out for text and image
       setIsFading(true);
+      setIsImageFading(true);
       
       // After fade out, change content
       setTimeout(() => {
@@ -61,16 +66,20 @@ export default function Hero() {
           return newIndex;
         });
         
+
+        setRotation((prevRotation) => prevRotation + 90);
+        
         // After content change, fade in
         setTimeout(() => {
           setIsFading(false);
+          setIsImageFading(false);
         }, 100);
       }, 300);
       
-    }, 5000); // Change every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
-  }, []); // Empty dependency array - runs once on mount
+  }, []);
 
   return (
     <>
@@ -110,11 +119,43 @@ export default function Hero() {
           </div>
 
           <div className="right-side banner_container_right_side">
-            <img
-              className="banner-img"
-              src="/hero-mobile-img.png"
-              alt="banner-img"
-            />
+            <div 
+              className="ellipse" 
+              style={{
+                transform: `rotate(${rotation}deg)`,
+                transition: "transform 0.5s ease-in-out"
+              }}
+            >
+              {/* Four images positioned around the ellipse */}
+              <div className="ellipse-image image-1">
+                <img
+                  className={`mobile-img ${isImageFading ? "image-fade-out" : "image-fade-in"}`}
+                  src={slides[0].mobileImage}
+                  alt="mobile view 1"
+                />
+              </div>
+              <div className="ellipse-image image-2">
+                <img
+                  className={`mobile-img ${isImageFading ? "image-fade-out" : "image-fade-in"}`}
+                  src={slides[1].mobileImage}
+                  alt="mobile view 2"
+                />
+              </div>
+              <div className="ellipse-image image-3">
+                <img
+                  className={`mobile-img ${isImageFading ? "image-fade-out" : "image-fade-in"}`}
+                  src={slides[2].mobileImage}
+                  alt="mobile view 3"
+                />
+              </div>
+              <div className="ellipse-image image-4">
+                <img
+                  className={`mobile-img ${isImageFading ? "image-fade-out" : "image-fade-in"}`}
+                  src={slides[3].mobileImage}
+                  alt="mobile view 4"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
