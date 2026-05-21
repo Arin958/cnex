@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import "./Sidebar.css";
+import { NavLink } from "react-router-dom";
 
-export default function Sidebar({ isOpen, onClose, onLinkClick }) {
+export default function Sidebar({ isOpen, onClose, onLinkClick, menuItems }) {
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("sidebar-open");
@@ -25,12 +26,7 @@ export default function Sidebar({ isOpen, onClose, onLinkClick }) {
     return () => document.removeEventListener("keydown", handleEscape);
   }, [isOpen, onClose]);
 
-  const menuItems = [
-    { href: "#hero", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#faq", label: "FAQ" },
-    { href: "#form", label: "Contact Us" },
-  ];
+
 
   return (
     <>
@@ -53,13 +49,13 @@ export default function Sidebar({ isOpen, onClose, onLinkClick }) {
         <ul className="sidebar-nav-links">
           {menuItems.map((item, index) => (
             <li key={index} className="sidebar-links">
-              <a
+              <NavLink
                 className="sidebar-redirect-link"
-                href={item.href}
-                onClick={(e) => onLinkClick(e, item.href)}
+                to={item.href}
+                onClick={onLinkClick}
               >
                 {item.label}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>

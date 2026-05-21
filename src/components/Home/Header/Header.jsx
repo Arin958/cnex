@@ -1,12 +1,13 @@
 import { useState } from "react";
 
+import { NavLink } from "react-router-dom";
+
 import "./Header.css";
+
 import Sidebar from "../../Sidebar/Sidebar";
 
 export default function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -16,39 +17,37 @@ export default function Header() {
     setIsSidebarOpen(false);
   };
 
-  const handleLinkClick = (e, href) => {
-    e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      closeSidebar();
-    }
+  const handleLinkClick = () => {
+    closeSidebar();
   };
+
+  const menuItems = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/faq", label: "FAQ" },
+    { href: "/form", label: "Contact Us" },
+  ];
 
   return (
     <>
       <header className="header">
         <nav className="navbar">
           <div className="logo">
-            <a href="#" className="logo-link">
+            <NavLink to="/" className="logo-link">
               <img src="/logo.png" alt="logo" className="logo-image" />
-            </a>
+            </NavLink>
           </div>
 
           {/* Desktop Navigation */}
+
           <ul className="nav-links">
-            <li className="links">
-              <a className="redirect-link" href="#hero">Home</a>
-            </li>
-            <li className="links">
-              <a className="redirect-link" href="#about">About</a>
-            </li>
-            <li className="links">
-              <a className="redirect-link" href="#faq">FAQ</a>
-            </li>
-            <li className="links">
-              <a className="redirect-link" href="#form">Contact Us</a>
-            </li>
+            {menuItems.map((item, index) => (
+              <li key={index} className="links">
+                <NavLink className="redirect-link" to={item.href}>
+                  {item.label}
+                </NavLink>
+              </li>
+            ))}
           </ul>
 
           <div className="button-container">
@@ -64,11 +63,11 @@ export default function Header() {
         </nav>
       </header>
 
-    
-      <Sidebar 
-        isOpen={isSidebarOpen} 
+      <Sidebar
+        isOpen={isSidebarOpen}
         onClose={closeSidebar}
         onLinkClick={handleLinkClick}
+        menuItems={menuItems}
       />
     </>
   );

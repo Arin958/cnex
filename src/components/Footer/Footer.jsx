@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Footer.css"
 export default function Footer() {
   return (
@@ -6,7 +7,7 @@ export default function Footer() {
         <div className="footer-section">
           <div className="logo">
             <img
-              src="./image/footer-logo.png"
+              src="/footer-logo.png"
               alt="footer-logo"
               className="footer-logo"
             />
@@ -24,27 +25,27 @@ export default function Footer() {
               <p className="footer-lists">cnex@gmail.com</p>
             </div>
             <div className="social-links">
-              <a
-                href="www.facebook.com"
+              <Link
+                to="www.facebook.com"
                 className="social-link"
                 aria-label="Facebook"
               >
                 <i className="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="www.twitter.com"
+              </Link>
+              <Link
+                to="www.twitter.com"
                 className="social-link"
                 aria-label="Twitter"
               >
                 <i className="fab fa-twitter"></i>
-              </a>
-              <a
-                href="www.instagram.com"
+              </Link>
+              <Link
+                to="www.instagram.com"
                 className="social-link"
                 aria-label="Instagram"
               >
                 <i className="fab fa-instagram"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -55,7 +56,7 @@ export default function Footer() {
             <div className="footer-list-container">
               <p className="footer-list-heading">Order and Pre-order</p>
               <p className="footer-lists">Beauty Service Appointed Book</p>
-              <p className="footer-lists">+Order and Pre-order</p>
+              <p className="footer-lists">Order and Pre-order</p>
               <p className="footer-lists">Order and Pre-order</p>
             </div>
           </div>
@@ -64,22 +65,22 @@ export default function Footer() {
         <div className="download-app footer-section">
           <h4 className="footer-heading">Download Our App</h4>
           <div className="app-download">
-            <a href="/google">
+            <Link to="/google">
               <img
                 width="196px"
-                src="./image/appdownload-img (1).png"
+                src="/appdownload-img.png"
                 alt="apple store"
                 className="app-download-img"
               />
-            </a>
-            <a href="/google">
+            </Link>
+            <Link to="/google">
               <img
                 width="196px"
-                src="./image/googledownload.png"
+                src="/googledownload.png"
                 alt="google play"
                 className="app-download-img"
               />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
